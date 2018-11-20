@@ -6,7 +6,7 @@ getBuildings <- function(cluster_id) {
   data_path = file.path(getwd(), 'R', data_filename)
   exists = file.exists(data_path)
   sys = system.file(data_filename, package="buildingPrediction")
-  return(list(wd = wd, exists = exists, sys = sys))
+  return(list(exists = exists, sys = sys))
   # load(data_path)
   # prediction_building_subset_sp$poly = as.vector(prediction_building_subset_sp$which_poly)
   # prediction_building_subset_sp$which_poly <- NULL
