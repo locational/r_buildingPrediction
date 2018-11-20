@@ -2,8 +2,7 @@ library(sp)
 library(geojsonio)
 
 getBuildings <- function(cluster_id) {
-  data_path = "R/prediction_building_subset_sp.RData"
-  wd = getwd()
+  data_path = file.path(getwd(), 'R', 'prediction_building_subset_sp.RData')
   exists = file.exists(data_path)
   return(list(wd = wd, exists = exists))
   # load(data_path)
