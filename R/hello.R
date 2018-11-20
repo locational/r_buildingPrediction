@@ -1,18 +1,20 @@
-# Hello, world!
-#
-# This is an example function named 'hello'
-# which prints 'Hello, world!'.
-#
-# You can learn more about package authoring with RStudio at:
-#
-#   http://r-pkgs.had.co.nz/
-#
-# Some useful keyboard shortcuts for package authoring:
-#
-#   Build and Reload Package:  'Cmd + Shift + B'
-#   Check Package:             'Cmd + Shift + E'
-#   Test Package:              'Cmd + Shift + T'
+library(sp)
+library(jsonlite)
+
+# library(raster)
+# library(rgdal)
+# library(sf)
+# library(geojsonio)
+
+
 
 hello <- function() {
   print("Hello, world!")
+}
+
+getBuildings <- function(cluster_id) {
+  load("R/prediction_building_subset_sp.RData")
+  plot_buildings <- prediction_building_subset_sp[prediction_building_subset_sp$cluster ==
+                                                    cluster_id,]
+
 }
